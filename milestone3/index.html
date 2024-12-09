@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styel.css">
+</head>
+<body>
+    <h1>Dynamic Resume Builder </h1>
+    <form id="resumeForm">
+        <fieldset>
+            <legend>personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name"><br>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required placeholder="Enter your email"><br>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required placeholder="Enter your phone"><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required placeholder="Enter your address"><br>
+
+            <label for="profilepicture">profilepicture: </label>
+            <input type="file" id="profilepicture" name="profilepicture" accept="image/*" required><br>
+        </fieldset>
+
+        <fieldset>
+            <legend> WORK EXPERIENCE </legend>
+            <textarea id="experience" name="experience" rows="4" required placeholder="Enter your Work experience"></textarea><br>
+        </fieldset>
+
+        <fieldset>
+            <legend> EDUCATION </legend>
+            <textarea id="education" name="education" rows="4" required placeholder="Enter your education"></textarea><br>
+        </fieldset>
+
+        <fieldset>
+            <legend> SKILLS </legend>
+            <textarea id="skills" name="skills" rows="4" required placeholder="Enter your skills"></textarea><br>
+        </fieldset>
+
+        <button type="submit">Generate Resume Below</button></form><br>
+
+        <div id="resumeOutput">
+            <!--Resume Will Be Generated Below -->
+        </div>
+
+        <script src="script.js"></script>
+</body>
+</html>
