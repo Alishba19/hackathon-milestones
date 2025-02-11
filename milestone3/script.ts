@@ -1,56 +1,37 @@
-document.getElementById('resumeForm')?.addEventListener('submit', function(event) {
+const form = document.getElementById("resumeform") as HTMLFormElement;
+const resumeDisplayElement = document.getElementById("resumeDisplay") as HTMLDivElement;
+
+form.addEventListener("submit", (event: Event)=>{
     event.preventDefault();
 
-    // Get references to form elements using their IDs
-    const profilePictureInput = document.getElementById('profilePicture') as HTMLElement;
-    const nameElement = document.getElementById('name') as HTMLElement;
-    const emailElement = document.getElementById('email') as HTMLElement;
-    const phoneElement = document.getElementById('phone') as HTMLElement;
-    const addressElement = document.getElementById('address') as HTMLElement;
-    const educationElement = document.getElementById('education') as HTMLElement;
-    const experienceElement = document.getElementById('experience') as HTMLElement;
-    const skillsElement = document.getElementById('skills') as HTMLElement;
-
-    if (profilePictureInput && nameElement && emailElement && phoneElement && addressElement && educationElement && experienceElement && skillsElement) {
-
-        const name = (nameElement as HTMLInputElement).value;
-        const email = (emailElement as HTMLInputElement).value;
-        const phone = (phoneElement as HTMLInputElement).value;
-        const address = (addressElement as HTMLInputElement).value;
-        const education = (educationElement as HTMLInputElement).value;
-        const experience = (experienceElement as HTMLInputElement).value;
-        const skills = (skillsElement as HTMLInputElement).value;
-
-        // Handle profile picture
-        const profilePictureFile = (profilePictureInput as HTMLInputElement).files?.[0];
-        const profilePictureURL = profilePictureFile ? URL.createObjectURL(profilePictureFile) : '';
-
-        // Create resume output
-        const resumeOutput = `
-        <h2>Resume</h2>
-        ${profilePictureURL ? `<img src="${profilePictureURL}" alt="Profile Picture" class="profilePicture">` : ''}
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone Number:</strong> ${phone}</p>
-        <p><strong>Address:</strong> ${address}</p>
-
-        <h3>Education</h3>
-        <p>${education}</p>
-
-        <h3>Work Experience</h3>
-        <p>${experience}</p>
-
-        <h3>Skills</h3>
+        const Name = (document.getElementById("Name") as HTMLInputElement).value
+        const email = (document.getElementById("email") as HTMLInputElement).value
+        const phone = (document.getElementById("phone") as HTMLInputElement).value
+        const address = (document.getElementById("address") as HTMLInputElement).value
+        const education = (document.getElementById("education") as HTMLInputElement).value
+        const skills = (document.getElementById("skills") as HTMLInputElement).value
+        const experience = (document.getElementById("experience") as HTMLInputElement).value;
+         
+        const resumeHTML =`
+        <h2><b>My Resume</b></h2>
+        <h3><b>Personal Information</b></h3>
+        <p>Name:${Name}</p>
+        <p>Email:${email}</p>
+        <p>Phone:${phone}</p>
+        
+        <h3><b>Education</b></h3>
+        <p>Education:${education}</p>
+        
+        <h3><b>Skills<b/></h3>
         <p>${skills}</p>
-        `;
+        
+        <h3><b>Experience</b></h3>
+        <p>${experience}</P>`;
 
-        const resumeOutputElement = document.getElementById('resumeOutput');
-        if (resumeOutputElement) {
-            resumeOutputElement.innerHTML = resumeOutput;
-        } else {
-            console.error('The resume output element is missing');
+       if(resumeDisplayElement){
+            resumeDisplayElement.innerHTML = resumeHTML;
+        }else {
+            console.error("The resume display element is missing");
         }
-    } else {
-        console.error('One or more form elements are missing');
-    }
-});
+    })
+    
