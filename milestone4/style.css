@@ -1,0 +1,110 @@
+h1{
+    text-align: center;
+    color:midnightblue;
+    font-family:Georgia, Times, 'Times New Roman', serif;
+}
+.outer{
+    line-height: 1cm;
+    width: 700px;
+    min-height: fit-content;
+    border: 2px solid grey;
+    margin: 0px auto;
+    background-color: floralwhite;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px grey;
+    padding: 10px;
+    border-top: 0px;
+    border-style:groove;
+}
+body{
+    font-family:sans-serif,Arial, Helvetica;
+    margin: 50px;
+    padding: 2px;
+    background-color:lightgrey;
+    background-image: url(https://imgv3.fotor.com/images/share/Free-blue-gradient-pattern-background-from-Fotor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fieldset{
+    border-radius: 8px;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+    background-color:mintcream;
+    border: 3px solid rgb(138, 84, 239);
+    box-shadow: 0 1px 10px rgb(80, 64, 250);
+}
+legend{
+    text-align: center;
+    font-weight: bolder;
+    color:navy;
+}
+label{
+    text-align: left;
+    display:contents;
+    margin-top: 10px;
+    color:rgb(15, 15, 131);
+}
+.picture{
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 3px 10px blue;
+    border: 2px #3498bd;
+    border-radius: 500%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+input,textarea{
+    width:calc(100% - 1px);
+    padding: 10px;
+    margin-top: 6px;
+    border: 2px solid#3498bd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 3px 10px rgb(22, 66, 116);
+    margin-bottom: 10px;
+    border-top-style:hidden;
+}
+button{
+    width: 100%;
+    padding: 5px;
+    background-color:rgb(207, 199, 228);
+    color: darkblue;
+    border: 2px solid darkblue;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: large;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    box-shadow:0 2px 5px blue;
+}
+button:hover{
+        background-color: rgb(76, 97, 252);
+}
+#resumeDisplay{
+    line-height: 1cm;
+    width: 700px;
+    min-height: fit-content;
+    padding: 10px;
+    border-top: 10px;
+    border: 2px solid grey;
+    border-style:groove;
+    border-radius: 4px;
+    background-color: mintcream;
+    text-align: center;
+    border: 2px solid rgb(183, 149, 247);
+    margin: 0 auto;
+    color: darkblue;
+}
+#resumeDisplay h2{
+    font-size:xx-large;
+    font-weight:900;
+}
+#resumeDisplay h3{
+    color: black;
+    font-style:italic;
+    font-size: large;
+}
